@@ -1,0 +1,24 @@
+title Ejercicio 0.6
+
+user->browser: Enter form
+user->browser: Form onSumit
+note over browser:
+Event controller
+    add note to list notes.push(note)
+    
+    browser executes the event handler
+    that renders notes to display    
+end note
+browser-->user: Data visualization
+note over browser:
+    The code determines that the data will be
+    sent with an HTTP POST request and the data
+    type will be JSON. The data type is determined
+    with a Content-type header. The data is then
+    sent as JSON-string.
+end note
+
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: message:"note created"
+
