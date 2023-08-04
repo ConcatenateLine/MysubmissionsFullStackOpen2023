@@ -62,15 +62,17 @@ const App = () => {
 
   const deletePerson = (id) => {
     const person = persons.find(person => person.id === id)
-    window.confirm(`Eliminate ${person.name} ?`)
-    personsService
-    .remove(id)
-    .then(response => {
-      setPersons(persons.filter(person => person.id !== id))
-      setMessageStatus(`error`)
-      setErrorMessage(`Deleted ${person.name}`)
-      messageToNull();
-    })
+    if(window.confirm(`Eliminate ${person.name} ?`)){
+      personsService
+      .remove(id)
+      .then(response => {
+        setPersons(persons.filter(person => person.id !== id))
+        setMessageStatus(`error`)
+        setErrorMessage(`Deleted ${person.name}`)
+        messageToNull();
+      })
+    }
+   
   }
 
   const updatePerson = (id,personUpdate) => {

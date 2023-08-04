@@ -1,0 +1,36 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Ebran Cade",
+  "number": "12-43-222245"
+}
+
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Lorena Cade",
+  "number": "12-43-233345"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "12-43-233345"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Lorena Cade"
+}
