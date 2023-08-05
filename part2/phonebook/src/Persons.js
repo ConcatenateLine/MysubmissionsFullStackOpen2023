@@ -6,7 +6,7 @@ const Persons = ({personsToShow,deletePerson}) => {
     return (
         <ul>
             {personsToShow.map(person => 
-                <Person key={person.name} person={person} deletePerson={deletePerson} />
+                <Person key={person.id} person={person} deletePerson={deletePerson} />
             )}
       </ul>
     )
