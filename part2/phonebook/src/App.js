@@ -53,6 +53,10 @@ const App = () => {
         setMessageStatus(`sucess`)
         setErrorMessage(`Added ${person.name}`)
         messageToNull();
+      }).catch(error => {
+        setMessageStatus(`error`)
+        setErrorMessage(error.response.data.error)
+        messageToNull();
       })
     }else if(window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)){
       person.id = persons.find(p => p.name === person.name ).id
@@ -88,11 +92,10 @@ const App = () => {
         setMessageStatus(`sucess`)
         setErrorMessage(`Update ${changePersons.name}`)
         messageToNull();
-      }).catch(error => {
+      })
+      .catch(error => {
         setMessageStatus(`error`)
-        setErrorMessage(
-          `Person '${changePersons.name}' was already removed from server`
-        )
+        setErrorMessage(error.response.data.error)
         setPersons(persons.filter(person => person.id !== id))        
         messageToNull();
       })
