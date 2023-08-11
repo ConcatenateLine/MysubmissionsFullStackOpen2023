@@ -1,0 +1,22 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRyYW50aW5vIiwiaWQiOiI2NGQ1MzM5ZmZhNDAyYTYyNDg5OWMzMWIiLCJpYXQiOjE2OTE3MjUyMDd9.0ybUrp0FFQy2h5IFXjTOtB_ezIft3D5qCFbnj4Qgrxg
+
+{
+    "title": "blog numero 1",
+    "author": "lorena lopes",
+    "url": "http://localhost:3001/api/blogs",
+    "likes": "10",
+    "userId": "64d5339ffa402a624899c31b"
+}
+
+
+###
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+  "name": "Lorena Cade",
+  "number": "12-43-233345"
+}
